@@ -1,4 +1,7 @@
 #include "Shader.h"
+#include <string>
+#include <iostream>
+#include <sstream>
 
 Shader::Shader()
 {
@@ -21,6 +24,9 @@ void Shader::CreateFromFile(const char *vertexLocation, const char *fragmentLoca
 
 std::string Shader::ReadFile(const char *fileLocation)
 {
+    char fpath[1024] = "";
+    _fullpath(fpath, fileLocation, 1024);
+
     std::string content;
     std::ifstream FileStream(fileLocation, std::ios::in);
 

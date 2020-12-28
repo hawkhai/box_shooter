@@ -2,12 +2,12 @@
 
 Window::Window() : width(800), height(600)
 {
-    for (std::size_t i; i < 1024; i++)
+    for (std::size_t i = 0; i < 1024; i++)
         keys[i] = 0;
 }
 Window::Window(GLint windowWidth, GLint windowHeight) : width(windowWidth), height(windowHeight)
 {
-    for (std::size_t i; i < 1024; i++)
+    for (std::size_t i = 0; i < 1024; i++)
         keys[i] = 0;
 }
 
